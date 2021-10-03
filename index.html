@@ -25,7 +25,7 @@
     <div id="backdrop"></div>
     <header>
       <img src="images/logo.svg" alt="Easybank logo" />
-      <nav class="desktop-navbar">
+      <nav aria-label="nav-for-desktop" class="desktop-navbar">
         <a href="#hero">Home</a>
         <a href="#hero">About</a>
         <a href="#hero">Contact</a>
@@ -39,7 +39,7 @@
           onclick="toggleMobileNavbar()"
         />
       </nav>
-      <nav id="mobile-navbar">
+      <nav id="mobile-navbar" aria-label="nav-for-mobile">
         <a href="#hero">Home</a>
         <a href="#hero">About</a>
         <a href="#hero">Contact</a>
@@ -262,7 +262,7 @@
             </svg>
           </a>
         </div>
-        <nav>
+        <nav id="nav-footer" aria-label="nav-footer">
           <a href="#hero">About Us</a>
           <a href="#hero">Contact</a>
           <a href="#hero">Blog</a>
