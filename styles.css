@@ -163,7 +163,7 @@ header .invite {
   background-color: hsl(0, 0%, 98%);
 }
 
-.navbar a {
+.desktop-navbar a {
   display: none;
 }
 
@@ -375,7 +375,7 @@ p {
   padding-right: 1rem;
 }
 
-#articles article h4 {
+#articles article h3 {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   padding-left: 1rem;
@@ -480,7 +480,7 @@ footer nav a:hover {
     width: 80%;
   }
 
-  .navbar {
+  .desktop-navbar {
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin: 0 auto;
@@ -492,7 +492,7 @@ footer nav a:hover {
     margin: 0;
   }
 
-  .navbar a {
+  .desktop-navbar a {
     display: inline;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -502,7 +502,7 @@ footer nav a:hover {
     padding-bottom: 1.5rem;
   }
 
-  .navbar a:hover {
+  .desktop-navbar a:hover {
     border-bottom: 5px solid;
     border-image: linear-gradient(
       to right,
@@ -648,7 +648,7 @@ footer nav a:hover {
     height: auto;
   }
 
-  article h4 {
+  article h3 {
     font-size: 1.2rem;
   }
 
