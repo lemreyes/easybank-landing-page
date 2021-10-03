@@ -1,0 +1,747 @@
+/* reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* end of reset */
+
+:root {
+  font-size: 18px;
+  font-family: "Public Sans", sans-serif;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  z-index: 3;
+}
+
+header img {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+header .invite {
+  display: none;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.navbar a {
+  display: none;
+}
+
+#mobile-navbar {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: -16rem;
+  width: 90%;
+  z-index: 3;
+  background-color: hsl(0, 0%, 98%);
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 10px;
+}
+
+#backdrop {
+  display: none;
+  background-image: linear-gradient(hsl(233, 26%, 24%), transparent);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {background-color:white}
+  100% {background-image: linear-gradient(hsl(233, 26%, 24%), transparent)}
+}
+
+#mobile-navbar a {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-decoration: none;
+  color: hsl(233, 26%, 24%);
+}
+
+.invite {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  padding: 0.8em;
+  width: 150px;
+  border-radius: 2.6em;
+  text-align: center;
+}
+
+.invite a {
+  color: white;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.invite:hover {
+  background: linear-gradient(90deg, hsl(136, 86%, 62%), hsl(192, 93%, 62%));
+}
+
+main,
+section {
+  width: 100%;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 98%);
+  padding-bottom: 3rem;
+}
+
+#hero-banner {
+  position: relative;
+  background-image: url(./images/bg-intro-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 310px;
+  width: 100%;
+}
+
+#hero-banner::before {
+  content: "";
+  position: absolute;
+  background-image: url(./images/image-mockups.png);
+  background-repeat: no-repeat;
+  background-size: 95%;
+  background-position: center bottom;
+  height: 100%;
+  width: 100%;
+}
+
+#hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero h1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 400;
+  color: hsl(233, 26%, 24%);
+  text-align: center;
+  font-size: 2rem;
+}
+
+p {
+  color: hsl(233, 8%, 62%);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-align: center;
+}
+
+#why-easy-bank {
+  background-color: hsl(220, 16%, 96%);
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#reason-intro {
+  margin-bottom: 1rem;
+}
+
+#reason-intro h2 {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: hsl(233, 26%, 24%);
+}
+
+#reasons h3 {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#reasons img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+#articles {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: hsl(0, 0%, 98%);
+}
+
+#articles h2 {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: hsl(233, 26%, 24%);
+}
+
+#articles article {
+  margin: 1rem;
+  padding-top: 0;
+  padding-bottom: 2rem;
+  background-color: white;
+}
+
+#articles article p {
+  padding: 0;
+  text-align: left;
+  font-size: 14px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#articles article img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.byline {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: hsl(233, 8%, 62%);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#articles article h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: hsl(233, 26%, 24%);
+}
+
+#articles article a {
+  color: hsl(233, 26%, 24%);
+  text-decoration: none;
+  margin: 0 auto;
+}
+#articles article a:hover {
+  color: hsl(136, 65%, 51%);
+}
+
+footer {
+  background-color: hsl(233, 26%, 24%);
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#footer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+#easybank-logo {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+#social-media-panel img {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.svg-icon {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.svg-icon:hover path {
+  fill: hsl(136, 65%, 51%);
+}
+
+footer nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 12px;
+  margin-top: 1rem;
+}
+
+footer nav a {
+  text-align: center;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: hsl(220, 16%, 96%);
+}
+
+footer nav a:hover {
+  color: hsl(136, 65%, 51%);
+}
+
+.copyright {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: hsl(233, 8%, 62%);
+  font-size: 12px;
+}
+
+.attribution {
+  margin-top: 2rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 600px) {
+  body,
+  main {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header {
+    width: 80%;
+  }
+
+  .navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0 auto;
+  }
+
+  header .invite {
+    display: inline;
+    background-color: hsl(0, 0%, 98%);
+    margin: 0;
+  }
+
+  .navbar a {
+    display: inline;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    color: hsl(233, 8%, 62%);
+    font-size: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .navbar a:hover {
+    border-bottom: 5px solid;
+    border-image: linear-gradient(
+      to right,
+      hsl(136, 65%, 51%),
+      hsl(192, 70%, 51%)
+    );
+    border-image-slice: 1;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+
+  #hero {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 98%);
+    width: 100%;
+    height: 500px;
+    padding-bottom: 0;
+    z-index: 2;
+  }
+
+  #hero-banner {
+    background-image: url(./images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 170%;
+    background-position: left center;
+    min-height: 500px;
+    width: 100%;
+    height: 500px;
+    left: 30px;
+  }
+
+  #hero-banner::before {
+    content: "";
+    position: absolute;
+    background-image: url(./images/image-mockups.png);
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: center bottom;
+    width: 100%;
+    height: 600px;
+    left: 250px;
+  }
+
+  #hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 10%;
+    width: 400px;
+  }
+
+  #hero h1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 400;
+    color: hsl(233, 26%, 24%);
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  p {
+    color: hsl(233, 8%, 62%);
+    padding: 0;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  #why-easy-bank {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  #reason-intro {
+    margin-bottom: 1rem;
+    margin-left: 10%;
+    width: 40%;
+  }
+
+  #reason-intro h2 {
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  #reasons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 10%;
+    padding-right: 10%;
+    grid-gap: 1rem;
+  }
+
+  #reasons h3 {
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  #reasons img {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  #reasons p {
+    font-size: 1rem;
+  }
+
+  #articles {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #article-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #articles h2 {
+    text-align: left;
+    margin-left: 10%;
+    font-size: 2rem;
+  }
+
+  #articles article img {
+    width: 100%;
+    height: auto;
+  }
+
+  article h4 {
+    font-size: 1.2rem;
+  }
+
+  #articles article p {
+    font-size: 1rem;
+  }
+
+  footer {
+    background-color: hsl(233, 26%, 24%);
+    width: 100%;
+  }
+
+  #footer-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    height: fit-content;
+    width: 80%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  #easybank-logo {
+    padding: 0;
+    justify-self: left;
+  }
+
+  #social-media-panel {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    justify-self: left;
+  }
+
+  #social-media-panel img {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .svg-icon {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .svg-icon:hover path {
+    fill: hsl(136, 65%, 51%);
+  }
+
+  footer nav {
+    grid-column-start: 2;
+    grid-row: 1 / 3;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    height: fit-content;
+    font-size: 0.8rem;
+    margin-top: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  footer nav a {
+    text-align: left;
+    margin: 0;
+    text-decoration: none;
+    color: hsl(220, 16%, 96%);
+    margin-bottom: 1em;
+  }
+
+  footer nav a:hover {
+    color: hsl(136, 65%, 51%);
+  }
+
+  footer .invite {
+    justify-self: right;
+    margin: 0;
+  }
+
+  .copyright {
+    justify-self: right;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: hsl(233, 8%, 62%);
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #article-layout {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
