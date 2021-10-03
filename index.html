@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -25,7 +24,7 @@
     <div id="backdrop"></div>
     <header>
       <img src="images/logo.svg" alt="Easybank logo" />
-      <nav aria-label="nav-for-desktop" class="desktop-navbar">
+      <nav aria-label="navbar-for-desktop" class="desktop-navbar">
         <a href="#hero">Home</a>
         <a href="#hero">About</a>
         <a href="#hero">Contact</a>
@@ -39,7 +38,7 @@
           onclick="toggleMobileNavbar()"
         />
       </nav>
-      <nav id="mobile-navbar" aria-label="nav-for-mobile">
+      <nav id="mobile-navbar" aria-label="navbar-for-mobile">
         <a href="#hero">Home</a>
         <a href="#hero">About</a>
         <a href="#hero">Contact</a>
@@ -158,7 +157,7 @@
     </main>
     <footer>
       <div id="footer-container">
-        <div id="easybank-logo">
+        <div id="easybank-logo" aria-label="Easybank logo">
           <!-- inline svg in order to modify the font color -->
           <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
             <defs>
@@ -191,7 +190,7 @@
           </svg>
         </div>
         <div id="social-media-panel">
-          <a href="#hero">
+          <a href="#hero" aria-label="facebook">
             <svg
               id="facebook-icon"
               class="svg-icon"
@@ -205,7 +204,7 @@
               />
             </svg>
           </a>
-          <a href="#hero">
+          <a href="#hero" aria-label="youtube">
             <svg
               id="youtube-icon"
               class="svg-icon"
@@ -219,7 +218,7 @@
               />
             </svg>
           </a>
-          <a href="#hero">
+          <a href="#hero" aria-label="twitter">
             <svg
               id="twitter-icon"
               class="svg-icon"
@@ -233,7 +232,7 @@
               />
             </svg>
           </a>
-          <a href="#hero">
+          <a href="#hero" aria-label="pinterest">
             <svg
               id="pinterest-icon"
               class="svg-icon"
@@ -247,7 +246,7 @@
               />
             </svg>
           </a>
-          <a href="#hero">
+          <a href="#hero" aria-label="instagram">
             <svg
               id="instagram-icon"
               class="svg-icon"
@@ -262,7 +261,7 @@
             </svg>
           </a>
         </div>
-        <nav id="nav-footer" aria-label="nav-footer">
+        <nav id="nav-footer" aria-label="navbar footer">
           <a href="#hero">About Us</a>
           <a href="#hero">Contact</a>
           <a href="#hero">Blog</a>
